@@ -1,0 +1,21 @@
+.menu {
+    background-color: #fd8d64;
+    padding: 20px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    button {
+        background-color: #e96f43;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 25px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 800px) {
+        display: none;
+    }
+}

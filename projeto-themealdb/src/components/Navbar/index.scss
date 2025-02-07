@@ -1,0 +1,40 @@
+.navbar {
+    background-color: #2e2f35;
+    padding: 10px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+        background-color: #2e2f35;
+    }
+
+    svg {
+        color: #fff;
+        font-size: 35px;
+        cursor: pointer;
+        background-color: #2e2f35;
+        border: none;
+    }
+
+    svg:hover {
+        color: #fd8d64;
+        transition: .6s;
+    }
+
+    .navbar-container {
+        display: flex;
+        align-items: center;
+        background-color: #2e2f35;
+        
+        img {
+            background-color: transparent;
+            height: 90px;
+            width: auto;
+
+            @media (max-width: 500px) {
+                height: 60px;
+            }
+        }
+    }
+}

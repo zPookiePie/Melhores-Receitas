@@ -1,0 +1,102 @@
+.recipe-information {
+    padding: 2rem 5%;
+    max-width: 1600px;
+    margin: 0 auto;
+
+
+    h2 {
+        color: rgb(73, 73, 73);
+        font-size: 2.1rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .reset {
+        background-color: #e96f43;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 10px 40px;
+        font-size: 17px;
+        cursor: pointer;
+        font-weight: 500;
+        margin: 2rem 0;
+    }
+}
+
+.background-overlay {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.322);
+    }
+
+    h1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        color: white;
+        background-color: transparent;
+        text-align: center;
+        font-size: 3rem;
+    }
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    font-family: "raleway", sans-serif;
+    font-weight: 500;
+    padding: 0 1rem;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+
+    li::marker {
+        color: #e96f43;
+    }
+
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr; 
+    }
+}
+
+ol {
+    list-style-position: inside;
+    font-weight: 400;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 40px;
+    margin-bottom: 3rem;
+    font-size: 1.01rem;
+
+    .li-text {
+        margin-left: 0.5rem;
+    }
+
+    li::marker {
+        color: #e96f43;
+        font-weight: 700;
+        font-size: 1.7rem;
+    }
+}
+
+.line {
+    height: 1px;
+    background-color: rgb(100, 100, 100); 
+    flex-grow: 1;
+    flex-shrink: 1;
+}

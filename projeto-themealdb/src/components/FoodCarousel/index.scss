@@ -1,0 +1,142 @@
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 0.5rem;
+    width: 100%;
+    text-align: center;
+    margin: 4rem 0 2rem 0;
+    padding: 0 5%;
+    
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        font-family: "Raleway", sans-serif;
+
+        @media (max-width: 600px) {
+         font-size: 1.6rem;
+        }
+    }
+
+    .line {
+        height: 2px;
+        background-color: #e96f43;
+        flex-grow: 1;
+        flex-shrink: 1;
+
+        @media (min-width: 600px) {
+            max-width: 96px;
+        }
+    }
+}
+
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    max-width: 1500px; 
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding: 0 45px;
+
+
+    @media (max-width: 800px) {
+        width: 90%;
+        padding: 0;
+    }
+}
+
+.carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 25px;
+
+    @media (max-width: 800px) {
+        cursor: grab;
+    }
+
+}
+
+.food-grid {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    padding: 0;
+    margin: 0px;
+    list-style: none;
+}
+
+.food-card-container {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.food-card {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-button {
+    background-color: transparent;
+    border: none;
+    color: rgb(41, 41, 41);
+    font-size: 2.2rem;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+
+    @media (max-width: 800px) {
+        display: none;
+    }
+}
+
+.carousel-button.prev {
+    left: 1px;
+}
+
+.carousel-button.next {
+    right: 1px;
+}
+
+main {
+    display: block;
+}
+
+.carousel-indicators {
+    display: none;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 20px;
+
+    @media (max-width: 800px) {
+        display: flex;
+    }
+
+    .indicator {
+        width: 12px;
+        height: 12px;
+        background-color: #d3d3d3;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &.active {
+            background-color: #ff7a3d;
+        }
+    }
+
+    .indicator:hover {
+        background-color: #ff9966;
+    }
+}

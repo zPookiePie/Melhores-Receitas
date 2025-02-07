@@ -1,0 +1,13 @@
+.banner {
+    width: 100vw;
+    min-height: 70vh;
+    height: auto;
+    background-image: url('/foodbanner.webp');
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    @media (max-width: 800px) {
+        background-image: url('/bannerfoodmobile.webp');
+    }
+}
