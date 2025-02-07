@@ -8,13 +8,24 @@ import "./index.scss";
 export interface ReceitaType {
     id: number;
     title: string;
-    image: string;
+    image: string | null;
     ingredients: string[];
 }
 
 interface CarouselProps {
     apiUrl: string;
     title: string;
+}
+
+interface Ingrediente {
+    nomesIngrediente: string[];
+}
+
+interface ReceitaAPI {
+    id: number;
+    receita: string;
+    link_imagem?: string;
+    IngredientesBase?: { nomesIngrediente: string[] }[];
 }
 
 function FoodCarousel({ apiUrl, title }: CarouselProps) {
@@ -31,12 +42,12 @@ function FoodCarousel({ apiUrl, title }: CarouselProps) {
             const response = await axios.get(apiUrl);
             const receitas = Array.isArray(response.data) ? response.data : [];
 
-            const receitasFormatadas = receitas.map((recipe: any) => ({
+            const receitasFormatadas = receitas.map((recipe: ReceitaAPI) => ({
                 id: recipe.id,
                 title: recipe.receita, 
-                image: recipe.link_imagem || null,
+                image: recipe.link_imagem ?? "",
                 ingredients: recipe.IngredientesBase 
-                    ? recipe.IngredientesBase.flatMap((ing: any) => ing.nomesIngrediente) 
+                    ? recipe.IngredientesBase.flatMap((ing: Ingrediente) => ing.nomesIngrediente) 
                     : [],
             }));
 
